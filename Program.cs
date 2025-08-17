@@ -105,22 +105,20 @@ namespace OPPTask
     {
         static void Main(string[] args)
         {
-            // إنشاء الكتب
             Book book1 = new Book("C# Basics", "John Doe");
             Book book2 = new Book("OOP in Depth", "Jane Smith");
 
             Console.WriteLine("Book '" + book1.getTitle() + "' by " + book1.getAuthor() + " created.");
             Console.WriteLine("Book '" + book2.getTitle() + "' by " + book2.getAuthor() + " created.");
 
-            // إنشاء الأعضاء
+            
             StudentMember student = new StudentMember("Ahmed", 101);
             TeacherMember teacher = new TeacherMember("Sara", 201);
 
-            // استعارة الكتب
+         
             student.BorrowBook(book1);
             teacher.BorrowBook(book2);
 
-            // إعادة الكتب متأخرة + حساب الغرامة
             int studentLateDays = 4;
             student.ReturnBook(book1);
             double studentPenalty = student.CalculateLateFee(studentLateDays);
